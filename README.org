@@ -1,0 +1,4 @@
+#+title: Complete JavaScript Course 2024: From Zero to Expert!
+#+author: Ulysses Carlos
+#+date: <2024-01-04 Thu>
+This repository contains all the solutions I have made for the *The Complete JavaScript Course 2024: From Zero to Expert!* Udemy Course.
