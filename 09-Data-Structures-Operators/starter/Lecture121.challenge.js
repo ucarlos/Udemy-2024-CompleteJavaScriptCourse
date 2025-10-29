@@ -91,8 +91,6 @@ let oddTotal = 0;
 for (const [, value] of Object.entries(game.odds))
     oddTotal += value;
 
-console.log(oddTotal);
-
 let oddAverage = oddTotal / Object.values(game.odds).length
 console.log(`Odd Average: ${oddAverage}`);
 
