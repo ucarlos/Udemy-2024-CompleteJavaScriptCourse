@@ -3,7 +3,7 @@
  * Created by Ulysses Carlos on 12/21/2025 at 09:05 PM
  *
  * Lecture169.script.js
- *
+ * Using Array.some and Array.every
  * -----------------------------------------------------------------------------
  */
 
@@ -217,10 +217,12 @@ btnLoan.addEventListener("click", function(event) {
     const amount = Number(inputLoanAmount.value);
 
     // When the word 'any' is used in an array, it's a good use case for Array.some:
-    if (amount > 0 && currentAccount.movements.some(mov => (mov >= 0.1 * amount)))
-        ;
+    if (amount > 0 && currentAccount.movements.some(mov => (mov >= 0.1 * amount))) {
+        currentAccount.movements.push(amount);
+        updateUI(currentAccount);
+    }
 
-
+    inputLoanAmount.value = "";
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -234,4 +236,14 @@ console.log(movements.includes(-130));
 // In other words, is there at least a single value in the array that
 // satisfies the predicate?
 console.log(movements.some(mov => (mov === -130)));
+
+// There's also the Array.every method, which checks whether every element in an
+// array satisfies an specific predicate. This will return either true or false.
+console.log(account4.movements.every(mov => (mov > 0)));
+
+// NOTE: You can have a separate callback and pass it as a parameter, but I'm guessing you already know this.
+const deposit = (mov) => mov < 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
             
