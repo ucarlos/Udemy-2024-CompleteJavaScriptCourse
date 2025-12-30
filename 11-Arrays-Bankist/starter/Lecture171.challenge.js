@@ -130,3 +130,13 @@ clonedDogs.sort(function(dog1, dog2) {
     return dog1Recommended - dog2Recommended;
 });
 console.log(clonedDogs);
+
+// const dogsGroupedByPortion = Object.groupBy(dogs, dog => {
+//     if (dog.curFood > dog.recommendedFood)
+//         return "too-much";
+//     else if (dog.curFood < dog.recommendedFood)
+//         return "too-little";
+//     else
+//         return "exact";
+// });
+// console.log(dogsGroupedByPortion);
