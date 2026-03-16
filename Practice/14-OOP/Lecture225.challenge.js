@@ -35,13 +35,13 @@ const Car = function(make, speed) {
 // If you're planning on adding functions to this class, add it to the prototype since only adding
 // it to the object will add it to the *Car* object, not its instances.
 Car.prototype.accelerate = function() {
-    this.speed += 10;
-    console.log(`New ${this.make} Speed: ${this.speed}`);
+    this._speed += 10;
+    console.log(`New ${this._make} Speed: ${this._speed}`);
 }
 
 Car.prototype.brake = function() {
-    this.speed -= 5;
-    console.log(`New ${this.make} Speed: ${this.speed}`);
+    this._speed -= 5;
+    console.log(`New ${this._make} Speed: ${this._speed}`);
 }
 
 let car1 = new Car("BMW", 120);
